@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "35863690-8246-4b8e-a7b9-111d814b9918",
+		"name": "Article Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Article By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/article?id=49d9c11c-b0f8-42e4-8200-9e1e508a6578",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"article"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "49d9c11c-b0f8-42e4-8200-9e1e508a6578"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"author\": \"Leonardo\",\r\n  \"title\": \"Article\",\r\n  \"body\": \"Service\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/articles",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get List Article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/articles?offset=0&limit=10&search=Hello",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "search",
+							"value": "Hello"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

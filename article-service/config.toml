@@ -1,0 +1,24 @@
+[Application]
+  ServiceName="article"
+  ServiceVersion="1.0.0"
+  Env="local"
+  ServerPort=10009
+
+[Logger]
+  Level="debug"
+  Fulltimestamp=true
+  TimestampFormat="2006-01-02 15:04:05"
+
+[DBRead]
+  Host="localhost"
+  Port=5432
+  User="postgres"
+  Password="password"
+  Database="postgres"
+
+[DBWrite]
+  Host="localhost"
+  Port=5432
+  User="postgres"
+  Password="password"
+  Database="postgres"
