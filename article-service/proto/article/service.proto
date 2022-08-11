@@ -1,0 +1,14 @@
+syntax = "proto3";
+package article;
+
+option go_package = "article-service/pb/article;article";
+
+import "article/request.proto";
+import "article/return.proto";
+
+service ArticleService {
+  rpc GetArticle(GetArticleRequest) returns (GetArticleReturn) {}
+  rpc GetListArticle(GetListArticleRequest) returns (GetListArticleReturn) {}
+
+  rpc InsertArticle(InsertArticleRequest) returns (StringMessageReturn) {}
+}

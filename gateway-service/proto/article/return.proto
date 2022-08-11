@@ -1,0 +1,22 @@
+syntax = "proto3";
+package article;
+
+option go_package = "article-service/pb/article;article";
+//import "google/protobuf/timestamp.proto";
+
+message StringMessageReturn {
+	string id = 1;
+	string message = 2;
+}
+
+message GetArticleReturn {
+    string id = 1;
+    string author = 2;
+    string title = 3;
+    string body = 4;
+    string created_at = 5;
+}
+
+message GetListArticleReturn {
+    repeated GetArticleReturn Articles = 1;
+}
